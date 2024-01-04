@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import MainPage from "./pages/MainPage";
+import AuthPage from "./pages/AuthPage";
+import NoPage from "./pages/NoPage";
+import Layout from "./pages/Layout";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// console.log(process.env.REACT_APP_GOOGLE_CLIENT_ID);
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+    <React.StrictMode>
+      <Layout>
+        <Router>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="auth" element={<AuthPage />} />
+            <Route path="*" element={<NoPage />} />
+          </Routes>
+        </Router>
+      </Layout>
+    </React.StrictMode>
+  </GoogleOAuthProvider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
