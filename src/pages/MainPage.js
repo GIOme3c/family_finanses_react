@@ -4,6 +4,8 @@ const MainPage = () => {
   return (
     <>
       <ConstantExpenses />
+      
+
     </>
   );
 };
