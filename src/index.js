@@ -2,9 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import './index.css'
 
 import MainPage from "./pages/MainPage";
 import AuthPage from "./pages/AuthPage";
+import Finance from "./pages/Finance";
 import NoPage from "./pages/NoPage";
 import Layout from "./pages/Layout";
 
@@ -18,6 +20,9 @@ root.render(
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="auth" element={<AuthPage />} />
+
+            <Route path="/finance" element={<Finance />} />
+
             <Route path="*" element={<NoPage />} />
           </Routes>
         </Router>
