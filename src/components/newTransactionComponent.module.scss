@@ -23,6 +23,10 @@
   background-color: rgb(80, 80, 80);
   border-radius: 5px;
 
+  display: flex;
+  flex-direction: column;
+  
+
   &Bg {
     background-color: rgba(42, 42, 42, 0.641);
     width: 100%;
@@ -30,4 +34,102 @@
     position: absolute;
   }
 }
+
+.closeButton {
+  color: rgb(174, 174, 174);
+  font-size: 25px;
+  font-weight: 800;
+
+  position: absolute;
+  right: 5px;
+  top: 0px;
+
+  cursor: pointer;
+}
+
+.newTransaction {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.sum {
+  font-weight: 800;
+
+  input {
+    width: 60px;
+    color: white;
+    background-color: rgb(80, 80, 80);
+    font-size: 16px;
+    font-weight: 800;
+    border: none;
+  }
+}
+
+.types {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  span {
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &__active {
+      background-color: rgb(37, 37, 37);
+    }
+    
+  }
+}
+
+.categoryContainer {
+  display: flex;
+  margin: 7px 0;
+}
+
+
+.note {
+  border: none;
+  background-color: rgb(80, 80, 80);
+  font-size: 15px;
+  padding: 7px 0;
+  color:rgb(208, 208, 208);
+  letter-spacing: 1px;
+  
+  &::placeholder {
+    color: rgb(174, 174, 174);
+    letter-spacing: 1px;
+  }
+}
+
+
+.date {
+  border: none;
+  background-color: rgb(80, 80, 80);
+  font-size: 15px;
+  padding: 7px 0;
+  color:rgb(208, 208, 208);
+  letter-spacing: 1px;
+}
+
+.saveButton {
+  background-color: rgb(233, 233, 233);
+  color: rgb(36, 36, 36);
+  font-size: 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 1px;
+  margin: 7px 0;
+}
+
 

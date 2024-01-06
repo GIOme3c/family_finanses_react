@@ -8,7 +8,7 @@ const dataForEditMock = {
     categories: {
       salary: {
         left: '0',
-        all: '3000',
+        all: '3 000',
       },
     },
   },
@@ -43,7 +43,7 @@ export default function EditBudget ({dataForEdit}) {
     return (
       <div>
         {Object.keys(dataForEditMock[name].categories).map(category => {
-          return <div><span>{category}</span> <input type='text' value={dataForEditMock[name].categories[category].all}/></div>
+          return <div className={styles.smallCategoryContainer}><span className={styles.smallCategoryName}>{category}</span> <input type='text' value={dataForEditMock[name].categories[category].all}/></div>
         })}
       </div>
     )
@@ -63,8 +63,6 @@ export default function EditBudget ({dataForEdit}) {
         {showEditBudgetCategories('housing')}
         <PlanExpenseComponent type="housing"/>
       </div>
-      
-      EB
     </div>
   )
 }
