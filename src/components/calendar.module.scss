@@ -1,3 +1,23 @@
 .calendar {
   display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: rgb(76, 76, 76);
+  padding: 20px;
+  width: 280px;
+}
+
+.left-icon {
+  background-image: url('../img/icons/left-arrow.svg');
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.date {
+  margin: 0 10px;
+  font-size: 20px;
 }

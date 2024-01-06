@@ -1,5 +1,7 @@
 import PlanExpenseComponent from "./PlanExpenseComponent"
 
+import styles from './editBudget.module.scss'
+
 const dataForEditMock = {
   income : {
     count: '0',
@@ -51,13 +53,13 @@ export default function EditBudget ({dataForEdit}) {
   return (
     <div>
       {/* <EditBudgetWidget/> */}
-      <div>
-        <div>Income</div>
+      <div className={styles.container}>
+        <div className={styles.bigCategoryName}>Income</div>
         {showEditBudgetCategories('income')}
         <PlanExpenseComponent type="income"/>
       </div>
-      <div>
-        <div>Housing</div>
+      <div className={styles.container}>
+        <div className={styles.bigCategoryName}>Housing</div>
         {showEditBudgetCategories('housing')}
         <PlanExpenseComponent type="housing"/>
       </div>

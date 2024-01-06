@@ -3,6 +3,8 @@ import Calendar from "./Calendar";
 import Expenses from "./Expenses";
 import NewTransactionComponent from "./NewTransactionComponent";
 
+import styles from './overview.module.scss'
+
 // const dataExpensesMock = [
 //   '01.01'= [
 //     {
@@ -26,7 +28,7 @@ export default function Overview() {
   }
 
   return (
-    <div>
+    <div className={styles.overview}>
       <Calendar changeData={changeData}/>
 
       <Expenses dataExpenses={dataExpenses}/>
@@ -34,7 +36,6 @@ export default function Overview() {
       <NewTransactionComponent/> 
       {/* открывается модалка для добавления нового расхода */}
 
-      HELLO OVER
     </div>
   )
 }

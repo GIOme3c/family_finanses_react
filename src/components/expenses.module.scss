@@ -1,0 +1,67 @@
+.expensesContainer {
+  padding: 15px;
+  background-color: rgb(76, 76, 76);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.generalValues {
+  display: flex;
+  background-color: rgb(44, 44, 44);
+  border-radius: 7px;
+  padding: 0 20px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    font-weight: 800;
+
+    span {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 5px;
+      
+      color: rgb(158, 158, 158)
+    }
+  }
+}
+
+.expense {
+
+  &__helper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background: linear-gradient( rgb(75, 75, 75) ,rgb(43, 43, 43));
+    // background: linear-gradient(0deg, rgb(119, 119, 119), rgb(102, 106, 106) 50%, rgb(147, 147, 147) 100%);
+    // background: linear-gradient(0deg, rgb(119, 119, 119) 17%, rgb(15, 15, 15) 50%, rgb(147, 147, 147) 88%);
+    // box-shadow: 1px -4px 13px 6px rgb(56, 56, 56) inset;
+    background-color: rgb(63, 63, 63);
+    padding: 5px;
+    margin-top: 3px;
+    border-radius: 5px;
+  }
+
+  &__names {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+}
+
+.date {
+  font-weight: 800;
+  margin-top: 26px;
+}
+
+.sum {
+  font-weight: 800;
+}

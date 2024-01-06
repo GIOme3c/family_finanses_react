@@ -32,14 +32,14 @@ export default function Overview() {
   }
 
   return (
-    <div>
+    <div className={styles.budget}>
 
       <div className={styles['budget-widget-background']}>
         {isPlane ? <BudgetWidget data={dataForWidget}/> : <></>}
 
         <div className={styles['budget-button-container']}>
-          <div onClick={openPlane}>Plan</div>
-          <div onClick={openEdit}>Edit</div>
+          <div className={styles['budget-button__item']} onClick={openPlane}>Plan</div>
+          <div className={styles['budget-button__item']} onClick={openEdit}>Edit</div>
         </div>   
       </div>   
 
@@ -48,10 +48,6 @@ export default function Overview() {
       {isPlane ? <PlanBudget dataPlanBudget={dataBudget}/> : <EditBudget dataForEdit={dataBudget}/>}
       {/* Возможно здесь же нужно передать открытие модалки с просмотром расхода чтобы компонент просто отображал все и не нужна была ему логика */}
 
-
-
-      
-      HELLO Budget
     </div>
   )
 }

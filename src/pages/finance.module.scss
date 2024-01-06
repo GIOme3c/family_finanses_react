@@ -4,10 +4,14 @@
   color: white;
   font-size: 12px;
   justify-content: center;
-  
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .button-container__button {
   margin: 0 10px ;
   cursor: pointer;
+  letter-spacing: 2px;
 }
