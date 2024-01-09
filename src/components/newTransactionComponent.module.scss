@@ -75,17 +75,18 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 5px;
 
   span {
     padding: 8px 15px;
     border-radius: 20px;
     cursor: pointer;
-
-    &__active {
+  }
+  
+  &__active {
       background-color: rgb(37, 37, 37);
     }
-    
-  }
 }
 
 .categoryContainer {
