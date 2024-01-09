@@ -39,14 +39,12 @@ export default function NewTransactionComponent() {
   }
 
   const changeDate = (e) => {
-    // console.log(e)
-    console.log(e.target.value)
     setDate(e.target.value)
   }
 
 
   const onSave = () => {
-    console.log(sum, bigCategory, category, note, date)
+    // console.log(sum, bigCategory, category, note, date)
   }
 
   const newTransactionButton = <div onClick={open} className={styles.addButton}>+</div>

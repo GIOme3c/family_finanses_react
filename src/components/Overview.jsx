@@ -24,7 +24,7 @@ export default function Overview() {
   const changeData = (month) => {
     const dataFromServer = []
     //запрос на сервер чтобы подтянуть данные за определенный месяц и отобразить их на страничке overview
-    setDataExpenses(dataFromServer);
+    // setDataExpenses(dataFromServer);
   }
 
   return (

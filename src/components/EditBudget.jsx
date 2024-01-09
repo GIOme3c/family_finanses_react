@@ -1,3 +1,4 @@
+import { useState } from "react"
 import PlanExpenseComponent from "./PlanExpenseComponent"
 
 import styles from './editBudget.module.scss'
@@ -39,11 +40,27 @@ const dataForEditMock = {
 
 export default function EditBudget ({dataForEdit}) {
 
+  const [sum, setSum] = useState(0);
+
+  const changeBudgetCategory = (category) => {
+    const dataToServer = {
+      category,
+      sum,
+    }
+    // console.log(dataToServer)
+  }
+
+  const changeSum = (e,category) => {
+    setSum(e.target.value);
+    changeBudgetCategory(category);
+  }
+
   const showEditBudgetCategories = (name) => {
     return (
       <div>
         {Object.keys(dataForEditMock[name].categories).map(category => {
-          return <div className={styles.smallCategoryContainer}><span className={styles.smallCategoryName}>{category}</span> <input type='text' value={dataForEditMock[name].categories[category].all}/></div>
+          
+          return <div className={styles.smallCategoryContainer}><span className={styles.smallCategoryName}>{category}</span> <input type='text' value={dataForEditMock[name].categories[category].all} onChange={(e) => changeSum(e, category)}/></div>
         })}
       </div>
     )
@@ -56,12 +73,12 @@ export default function EditBudget ({dataForEdit}) {
       <div className={styles.container}>
         <div className={styles.bigCategoryName}>Income</div>
         {showEditBudgetCategories('income')}
-        <PlanExpenseComponent type="income"/>
+        <PlanExpenseComponent/>
       </div>
       <div className={styles.container}>
         <div className={styles.bigCategoryName}>Housing</div>
         {showEditBudgetCategories('housing')}
-        <PlanExpenseComponent type="housing"/>
+        <PlanExpenseComponent/>
       </div>
     </div>
   )

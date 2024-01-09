@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './calendar.module.scss'
 
 export default function Calendar({changeData}) {
@@ -7,26 +7,27 @@ export default function Calendar({changeData}) {
 
   const d = new Date()
 
-  const [dateNow, setDateNow] = useState(new Date())  //просчитать формулой
-
-  // console.log()
+  const [dateNow, setDateNow] = useState(new Date())
   
-  
-
-
   const nextPeriod = () => {
-    // setDateNow (dateNow+1);
+    setDateNow (state => {
+      const newState = new Date(state)
+      newState.setMonth(newState.getMonth()+1)
+      return newState
+    });
 
-    setDateNow ([dateNow.getMonth()+1]);
-
-    // dateNow.setMonth(dateNow.getMonth()+1)  Как изменить дату через стейт а не сетмонс
-
-    const month = dateNow //просчитать месяц или дату просто отправлять ??
-    // changeData(month)
+    const month = dateNow
+    changeData(month)
   }
 
   const prevPeriod = () => {
-    setDateNow (dateNow-1);
+
+    setDateNow (state => {
+      const newState = new Date(state)
+      newState.setMonth(newState.getMonth()-1)
+      return newState
+    });
+    
     const month = dateNow
     changeData(month)
   }

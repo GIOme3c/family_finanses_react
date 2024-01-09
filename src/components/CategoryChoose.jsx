@@ -86,7 +86,6 @@ export default function CategoryChoose({bigCategoryId, changeCategory}) {
     setChosenCategory(chosenCategoryId)
   },[bigCategoryId])
 
-  // console.log(chosenCategory, categories[Object.keys(categories)[bigCategoryId-1]])
   const chosenCategoryName = categories[Object.keys(categories)[bigCategoryId-1]].filter(category => category.id === chosenCategory)?.[0]?.name
 
 
