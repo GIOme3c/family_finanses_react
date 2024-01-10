@@ -100,6 +100,7 @@ export default function CategoryChoose({bigCategoryId, changeCategory}) {
   const changeLocalCategory = (e, id) => {
     setChosenCategory(id)
     changeCategory(id)
+    close()
   }
 
   const showBigCategoryBlock = (bigCategory) => {
@@ -127,8 +128,8 @@ export default function CategoryChoose({bigCategoryId, changeCategory}) {
 
   const categoryChooseJSX = 
   <div className={styles.categoryChooseContainer}>
-    <div>
-      <span onClick={close}>x</span><span>categories</span><span>+</span>
+    <div className={styles.categoriesTitleRow}>
+      <span onClick={close}>x</span><div>categories</div><span>+</span>
     </div>
 
     {/* {Object.keys(categories).map(bigCategory => {

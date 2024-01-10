@@ -41,3 +41,34 @@
     font-size: 15px;
   }
 }
+
+.categoryExpenses {
+  width: 290px;
+
+  *::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.categoryExpenseContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categoryExpenseName {
+  display: flex;
+  align-items: center;
+  
+  
+
+  span {
+    margin-right: 10px;
+  }
+
+}
+
+.dateExpenses {
+  display: flex;
+  justify-content: space-between;
+}

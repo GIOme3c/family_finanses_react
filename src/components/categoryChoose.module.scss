@@ -5,6 +5,13 @@
 
 .categoryChooseContainer {
   width : 280px;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  background-color: rgb(80, 80, 80);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .bigCategoryName {
@@ -36,5 +43,25 @@
 
   &::first-letter {
     text-transform: uppercase;
+  }
+}
+
+
+.categoriesTitleRow {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  span {
+    color: rgb(174, 174, 174);
+    font-size: 25px;
+    font-weight: 800;
+    cursor: pointer;
   }
 }

@@ -1,6 +1,7 @@
 import styles from './planBudget.module.scss'
 import './expenses-diagram.scss'
 import BudgetDiagram from './BudgetDiagram'
+import CategoryExpenses from './CategoryExpenses'
 
 const dataPlanBudgetMock = {
   income : {
@@ -39,10 +40,18 @@ const dataPlanBudgetMock = {
 
 export default function PlanBudget ({dataPlanBudget}) {
 
+  // const [isOpen]
+
+  const openCategoryExpenses = (name) => {
+    // setIsOpen(true)
+  }
+
   const showSectionCategories = (categoriesData) => {
     
     return (
       Object.keys(categoriesData).map(category => {
+
+        console.log(category)
 
         let percent = 0;
         if(categoriesData[category].left) {
@@ -53,11 +62,7 @@ export default function PlanBudget ({dataPlanBudget}) {
           
 
         return (
-        <div className={styles.smallCategories__item}>
-          <BudgetDiagram percent={percent}/>
-          <span className={styles.smallCategories__name}>{category}</span>
-          <span className={styles.smallCategories__money}>{categoriesData[category].left ? <>Br  {categoriesData[category].left} left</> : <>Br {categoriesData[category].all}</>}</span>
-        </div>
+        <CategoryExpenses category={category} categoriesData={categoriesData} percent={percent}/>
         )
       })
     )
